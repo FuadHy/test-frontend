@@ -1,24 +1,25 @@
-import logo from './logo.svg';
+/*
+** Author: Fuad
+** github.com/FuadHy
+** To: addissoftwares
+*/
 import './App.css';
+import {
+  BrowserRouter as Router
+} from 'react-router-dom';
+import history from './history';
+import SideBar from './components/layouts/SideBar'
+import Main from './components/layouts/Main'
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // unfortunately we dont need any route, the wrapper is just placed since its on single page.
+    <Router history={history}>
+      <SideBar />
+      <Main />
+    </Router>
   );
 }
 
